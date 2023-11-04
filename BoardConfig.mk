@@ -89,9 +89,6 @@ NEED_KERNEL_MODULE_RECOVERY := true
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
-# Add TW_DEVICE_VERSION
-TW_DEVICE_VERSION := BY TECHTICKS
-
 # Fix Android 13 Decryption
 PLATFORM_VERSION := 13
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
@@ -160,6 +157,3 @@ TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
 TW_OVERRIDE_SYSTEM_PROPS := "ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
-
-# Vibrator
-TW_SUPPORT_INPUT_AIDL_HAPTICS := true
