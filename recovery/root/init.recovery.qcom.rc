@@ -35,6 +35,13 @@ on late-fs
     start set_permissive
     start health-hal-2-1
 
+service vendor.qti.vibrator /system/bin/vendor.qti.hardware.vibrator.service
+    user root
+    group root
+    disabled
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    seclabel u:r:recovery:s0
+
 on boot
     setprop sys.usb.config mtp,adb
     start vendor.qti.vibrator
